@@ -1,0 +1,9 @@
+.expressionContainer{
+    background-color: aliceblue;
+    height: 350px;
+    text-align: center;
+}
+
+span{
+    color: red;
+}

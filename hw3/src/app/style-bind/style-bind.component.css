@@ -1,0 +1,30 @@
+.expressionContainer{
+    background-color: aliceblue;
+    height: 350px;
+    text-align: center;
+    justify-content: center;
+}
+
+span{
+    color: blue;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+.eventDiv{
+    width: 500px;
+    height: 100px;
+    background-color: blue;
+}

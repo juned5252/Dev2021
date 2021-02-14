@@ -1,0 +1,8 @@
+<div class="expressionContainer">
+    <h1>This is the event binding Component</h1>
+    <h2>here we have a button that is listening to the click event which will toggle the color of the div below</h2>
+    <button (click) = "toggleImage()">Show Image</button>
+    <div *ngIf = 'showImage'>
+        <img src="https://www.wikihow.com/images/4/43/Draw-a-Sailboat-Step-7-Version-2.jpg" alt="boat">
+    </div>  
+</div>                           

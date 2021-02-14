@@ -1,0 +1,7 @@
+<div class="expressionContainer">
+    <h1>This is the class binding Component</h1>
+    <h2 [class] = "successVar"> this line is style binded to the success class via the successVar property</h2>
+    <h3 [class] = "warningVar">Note: the class binding property has higher precedence than regular class attribute</h3>
+    <h2 [class.danger] = "isDanger"> we can also apply a class if a boolean property is set to true, here we are looking at the boolean property isDanger</h2>
+    <h2 [ngClass] = "myclasses">we can also bind multiple classes using the ngClass directive</h2>
+</div>
