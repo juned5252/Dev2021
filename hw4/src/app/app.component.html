@@ -1,0 +1,48 @@
+
+
+<div class = "btnContainer">
+   <button [class.active]="currentSelection=='all'" (click)="select('all')">All Movies</button>
+   <button [class.active]="currentSelection=='batman'" (click)="select('batman')">Batman</button>
+   <button [class.active]="currentSelection=='starwars'" (click)="select('starwars')">Star Wars</button>
+</div>
+
+<div  class="cardContainer" [ngSwitch]="currentSelection">
+  <div class="movies" *ngSwitchCase="'all'">
+    <div  class="card" *ngFor = 'let movie of allMovies'>
+      <!-- <img src="https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/vice-web.jpg"/> -->
+      <img src={{movie.Poster}} alt="pic">
+      <div class="container">
+        <h4><b>{{movie.Title}}</b></h4>
+        <p>{{movie.Year}}</p>
+      </div>
+  </div>
+  </div>
+
+  <div class="movies" *ngSwitchCase="'batman'">
+    <div  class="card" *ngFor = 'let movie of batmanMovies'>
+      <!-- <img src="https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/vice-web.jpg"/> -->
+      <img src={{movie.Poster}} alt="pic">
+      <div class="container">
+        <h4><b>{{movie.Title}}</b></h4>
+        <p>{{movie.Year}}</p>
+      </div>
+  </div>
+  </div>
+
+  <div class="movies" *ngSwitchCase="'starwars'">
+    <div  class="card" *ngFor = 'let movie of starwarsMovies'>
+      <!-- <img src="https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/vice-web.jpg"/> -->
+      <img src={{movie.Poster}} alt="pic">
+      <div class="container">
+        <h4><b>{{movie.Title}}</b></h4>
+        <p>{{movie.Year}}</p>
+      </div>
+  </div>
+  </div>
+
+  <div *ngSwitchDefault>
+    Content not found
+ </div>
+</div>
+<router-outlet></router-outlet>
+
